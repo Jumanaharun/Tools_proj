@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <title>Add books</title>
+</head>
+<body>
+    
+    <div class="container"> <!--container is a bootstrap-->
+    <header>
+        <h1>Add a new book</h1>
+        <a href="">Back</a>
+    </header>
+        <form action="data_save.php" method="post"> 
+            <!-- my-4 is bootstrap, used to put margin top and bottom  -->
+            <div class="form-element my-4"> 
+                <table>
+                    <tr>
+                    <td>Title</td>
+                    <td>
+                        <input type="text" class="form-control" name="title" placeholder="Enter the title of the book." required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Author</td>
+                    <td><input type="text" class="form-control" name="author" placeholder="Enter the name of the author." required>
+                    </td>
+                        
+                </tr>
+
+                <tr>
+                    <td>
+                    <div class="filter dropdown">
+                                <button type="button" class="dropdown-toggle" data-toggle="dropdown"> Genre: <span id="filtercount">All</span> <img class="search-arrow-down" src="/assets/images/angle-down.svg"/> </button>
+                                <ul class="dropdown-menu c4 genre-selection-box">
+
+
+
+                                                                            <li><input type="checkbox" id="action" name="genres" value="action"> <label for="action">Action</label></li>
+                                                                            <li><input type="checkbox" id="adventure" name="genres" value="adventure"> <label for="adventure">Adventure</label></li>
+                                                                            <li><input type="checkbox" id="cars" name="genres" value="cars"> <label for="cars">Cars</label></li>
+                                                                            <li><input type="checkbox" id="comedy" name="genres" value="comedy"> <label for="comedy">Comedy</label></li>
+                                                                            <li><input type="checkbox" id="dementia" name="genres" value="dementia"> <label for="dementia">Dementia</label></li>
+                                                                            <li><input type="checkbox" id="demons" name="genres" value="demons"> <label for="demons">Demons</label></li>
+                                                                            <li><input type="checkbox" id="drama" name="genres" value="drama"> <label for="drama">Drama</label></li>
+                                                                            <li><input type="checkbox" id="ecchi" name="genres" value="ecchi"> <label for="ecchi">Ecchi</label></li>
+                                                                            <li><input type="checkbox" id="fantasy" name="genres" value="fantasy"> <label for="fantasy">Fantasy</label></li>
+                                                                            <li><input type="checkbox" id="game" name="genres" value="game"> <label for="game">Game</label></li>
+                                                                            <li><input type="checkbox" id="harem" name="genres" value="harem"> <label for="harem">Harem</label></li>
+                                                                            <li><input type="checkbox" id="historical" name="genres" value="historical"> <label for="historical">Historical</label></li>
+                                                                            <li><input type="checkbox" id="horror" name="genres" value="horror"> <label for="horror">Horror</label></li>
+                                                                            <li><input type="checkbox" id="josei" name="genres" value="josei"> <label for="josei">Josei</label></li>
+                                                                            <li><input type="checkbox" id="kids" name="genres" value="kids"> <label for="kids">Kids</label></li>
+                                                                            <li><input type="checkbox" id="magic" name="genres" value="magic"> <label for="magic">Magic</label></li>
+                                                                            <li><input type="checkbox" id="martial-arts" name="genres" value="martial-arts"> <label for="martial-arts">Martial Arts</label></li>
+                                                                            <li><input type="checkbox" id="mecha" name="genres" value="mecha"> <label for="mecha">Mecha</label></li>
+                                                                            <li><input type="checkbox" id="military" name="genres" value="military"> <label for="military">Military</label></li>
+                                                                            <li><input type="checkbox" id="music" name="genres" value="music"> <label for="music">Music</label></li>
+                                                                            <li><input type="checkbox" id="mystery" name="genres" value="mystery"> <label for="mystery">Mystery</label></li>
+                                                                            <li><input type="checkbox" id="parody" name="genres" value="parody"> <label for="parody">Parody</label></li>
+                                                                            <li><input type="checkbox" id="police" name="genres" value="police"> <label for="police">Police</label></li>
+                                                                            <li><input type="checkbox" id="psychological" name="genres" value="psychological"> <label for="psychological">Psychological</label></li>
+                                                                            <li><input type="checkbox" id="romance" name="genres" value="romance"> <label for="romance">Romance</label></li>
+                                                                            <li><input type="checkbox" id="samurai" name="genres" value="samurai"> <label for="samurai">Samurai</label></li>
+                                                                            <li><input type="checkbox" id="school" name="genres" value="school"> <label for="school">School</label></li>
+                                                                            <li><input type="checkbox" id="sci-fi" name="genres" value="sci-fi"> <label for="sci-fi">Sci-Fi</label></li>
+                                                                            <li><input type="checkbox" id="seinen" name="genres" value="seinen"> <label for="seinen">Seinen</label></li>
+                                                                            <li><input type="checkbox" id="shoujo" name="genres" value="shoujo"> <label for="shoujo">Shoujo</label></li>
+                                                                            <li><input type="checkbox" id="shoujo-ai" name="genres" value="shoujo-ai"> <label for="shoujo-ai">Shoujo Ai</label></li>
+                                                                            <li><input type="checkbox" id="shounen" name="genres" value="shounen"> <label for="shounen">Shounen</label></li>
+                                                                            <li><input type="checkbox" id="shounen-ai" name="genres" value="shounen-ai"> <label for="shounen-ai">Shounen Ai</label></li>
+                                                                            <li><input type="checkbox" id="slice-of-life" name="genres" value="slice-of-life"> <label for="slice-of-life">Slice of Life</label></li>
+                                                                            <li><input type="checkbox" id="space" name="genres" value="space"> <label for="space">Space</label></li>
+                                                                            <li><input type="checkbox" id="sports" name="genres" value="sports"> <label for="sports">Sports</label></li>
+                                                                            <li><input type="checkbox" id="super-power" name="genres" value="super-power"> <label for="super-power">Super Power</label></li>
+                                                                            <li><input type="checkbox" id="supernatural" name="genres" value="supernatural"> <label for="supernatural">Supernatural</label></li>
+                                                                            <li><input type="checkbox" id="thriller" name="genres" value="thriller"> <label for="thriller">Thriller</label></li>
+                                                                            <li><input type="checkbox" id="vampire" name="genres" value="vampire"> <label for="vampire">Vampire</label></li>
+                                                                            <li><input type="checkbox" id="yaoi" name="genres" value="yaoi"> <label for="yaoi">Yaoi</label></li>
+                                                                            <li><input type="checkbox" id="yuri" name="genres" value="yuri"> <label for="yuri">Yuri</label></li>
+                                    
+                                </ul>
+                            </div>
+</td>
+
+        <!-- Budget Section -->
+        <div class="form-group">
+            <label for="budget">Your Budget (USD):</label>
+            <input type="number" id="budget" name="budget" required min="100" max="10000">
+        </div>
+
+                </tr>
+
+                <tr>
+                    <td>Book Description</td>
+                    <td>
+                        <input type="text" class="form-control" name="description" placeholder="Enter the description of the book." required>
+                    </td>
+                        
+                </tr>
+                    
+                </table>
+
+                <input type="submit" name="submit_button" value="submit">
+                
+            </div>
+            
+        </form>
+    </div>
+
+
+</body>
+</html>

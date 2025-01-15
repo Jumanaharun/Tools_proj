@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertiser Purchase Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .form-header {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkbox-group, .radio-group {
+            margin-bottom: 15px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .product-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-image img {
+            width: 200px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2 class="form-header">Advertiser Purchase Form</h2>
+
+    <form action="/submit" method="POST" novalidate>
+        <!-- Image of product/service -->
+        <div class="product-image">
+            <img src="https://via.placeholder.com/200" alt="Product Image">
+        </div>
+
+        <!-- Personal Information Section -->
+        <div class="form-group">
+            <label for="company-name">Company Name:</label>
+            <input type="text" id="company-name" name="company_name" required minlength="3" maxlength="100">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Radio Buttons for Advertisement Type -->
+        <div class="radio-group">
+            <label>Advertisement Type:</label>
+            <input type="radio" id="banner" name="ad_type" value="banner" required>
+            <label for="banner">Banner</label>
+
+            <input type="radio" id="video" name="ad_type" value="video">
+            <label for="video">Video</label>
+
+            <input type="radio" id="popup" name="ad_type" value="popup">
+            <label for="popup">Popup</label>
+        </div>
+
+        <!-- Select List for Ad Duration -->
+        <div class="form-group">
+            <label for="ad-duration">Ad Duration (in months):</label>
+            <select id="ad-duration" name="ad_duration" required>
+                <option value="">Select duration</option>
+                <option value="1">1 Month</option>
+                <option value="3">3 Months</option>
+                <option value="6">6 Months</option>
+                <option value="12">12 Months</option>
+            </select>
+        </div>
+
+        <!-- Checkbox for Additional Services -->
+        <div class="checkbox-group">
+            <label>Additional Services:</label>
+            <input type="checkbox" id="seo" name="additional_services" value="seo">
+            <label for="seo">SEO Optimization</label>
+
+            <input type="checkbox" id="social" name="additional_services" value="social_media">
+            <label for="social">Social Media Promotion</label>
+
+            <input type="checkbox" id="email-marketing" name="additional_services" value="email_marketing">
+            <label for="email-marketing">Email Marketing</label>
+        </div>
+
+        <!-- Budget Section -->
+        <div class="form-group">
+            <label for="budget">Your Budget (USD):</label>
+            <input type="number" id="budget" name="budget" required min="100" max="10000">
+        </div>
+
+        <!-- Terms and Agreement Checkbox -->
+        <div class="form-group">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
